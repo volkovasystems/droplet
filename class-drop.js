@@ -1,9 +1,14 @@
 var Drop = function Drop( accessToken ){
-	this.accessToken = accessToken;
-	this.primaryCollection = Drop.primaryCollection;
+	this.initialize.apply( this, Array.prototype.slice.call( arguments ) );
+	this.configure.apply( this, Array.prototype.slice.call( arguments ) );
 };
 
 Drop.primaryCollection = generateRandomMeanTime( );
+
+Drop.prototype.initialize = function initialize( accessToken ){
+	this.accessToken = accessToken;
+	this.primaryCollection = Drop.primaryCollection;
+}
 
 Drop.prototype.configure = function configure( ){
 	this.getCollectionList( function callback( ){
