@@ -1,0 +1,6 @@
+[submodule "boom"]
+	path = boom
+	url = git@github.com:volkovasystems/boom.git
+[submodule "generate-random-mean-time"]
+	path = generate-random-mean-time
+	url = git@github.com:volkovasystems/generate-random-mean-time.git
