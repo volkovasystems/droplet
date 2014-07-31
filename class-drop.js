@@ -31,7 +31,7 @@ Drop.prototype.getCollectionList = function getCollectionList( callback ){
 		} );
 };
 
-Drop.prototype.setPrimaryCollection = setPrimaryCollection( collectionName ){
+Drop.prototype.setPrimaryCollection = function setPrimaryCollection( collectionName ){
 	this.primaryCollection = collectionName;
 	Drop.primaryCollection = collectionName;
 }
