@@ -22,8 +22,9 @@ Drop.prototype.getCollectionList = function getCollectionList( callback ){
 	boom( "POST", "https://api.dropbox.com/1/datastores/list_datastores",
 		function catcher( ){
 			if( this.status == 200 ){
-				console.debug( this );
+				console.debug( 200, this );
 			}
+			console.debug( this );
 		},
 		function requestOverride( request ){
 			var bearer = [ "Bearer", accessToken ].join( " " )
