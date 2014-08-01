@@ -31,7 +31,7 @@ Drop.prototype.createPrimaryCollection = function createPrimaryCollection( callb
 
 	var DSIDParameter = [ "dsid", primaryCollection ].join( "=" );
 
-	boom( "POST", "https://api.dropbox.com/1/datastores/create_datastore",
+	boom( "POST", "https://api.dropbox.com/1/datastores/get_or_create_datastore",
 		function catcher( error ){
 			if( error ){
 				callback( error );
