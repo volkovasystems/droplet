@@ -58,8 +58,6 @@ Drop.prototype.createPrimaryCollection = function createPrimaryCollection( callb
 			var bearer = [ "Bearer", accessToken ].join( " " )
 			request.setRequestHeader( "Authorization", bearer );
 
-			request.setRequestHeader( "Content-Length", DSIDParameter.length );
-
 			request.ontimeout = function onTimeout( ){
 				var error = new Error( "request timed out" );
 				console.error( error );
